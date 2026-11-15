@@ -1,0 +1,30 @@
+{
+  "_note": "Working defaults for scripts/layout_spec.py. All lengths in cm. UNTESTED: none of these was measured in the editor yet (rehearsal Part B). 'source' says where each number came from.",
+  "units": "cm",
+  "player_height_cm": 176,
+  "player_capsule_radius_cm": 34,
+  "walk_speed_cm_s": 500,
+  "jump_max_height_cm": 150,
+  "max_gap_cm": 300,
+  "max_ledge_cm": 120,
+  "door_min_width_cm": 120,
+  "door_max_width_cm": 400,
+  "door_min_height_cm": 220,
+  "corridor_min_width_cm": 200,
+  "room_min_side_cm": 300,
+  "wall_thickness_cm": 10,
+  "wall_height_default_cm": 300,
+  "wall_height_min_cm": 250,
+  "door_edge_margin_cm": 50,
+  "length_tolerance_pct": 5,
+  "time_tolerance_s": 0.5,
+  "source": {
+    "player_height_cm": "UE third-person mannequin capsule (half height 88) from memory of the template; videos use 180-190. UNTESTED.",
+    "walk_speed_cm_s": "UE third-person template MaxWalkSpeed, from memory. UNTESTED: read it from the project's character in Part B.",
+    "jump_max_height_cm": "Conservative pick (template jump apex is higher, about 250 by calculation from memory). UNTESTED.",
+    "door_min_height_cm": "Video lesson 2.13: a good door is about 2.2 m, a gate about 2.7 m. UNTESTED.",
+    "door_min_width_cm": "Our pick: capsule is 68 wide, so 120 leaves room to turn. UNTESTED.",
+    "corridor_min_width_cm": "Our pick: 2 x door minimum feel, camera needs room. UNTESTED.",
+    "others": "Our picks to make the checker work. Change them in this file; the script reads it."
+  }
+}

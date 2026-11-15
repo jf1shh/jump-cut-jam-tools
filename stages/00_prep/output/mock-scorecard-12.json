@@ -1,0 +1,22 @@
+{
+  "_source": "stages/00_prep/output/mock-jam-findings-12.md (reviewed under T-20261109-01) + the mock's kept work/ files (~/Projects/megajam-mock/work: ship logs, vp13, vp15). Times are UTC.",
+  "kickoff": "2026-11-09T03:15:00+00:00",
+  "hard_stop": "2026-11-09T13:15:00+00:00",
+  "first_packaged_at": "2026-11-09T07:03:00+00:00",
+  "first_playable_packaged_at": "2026-11-09T08:31:00+00:00",
+  "gates": {
+    "step_shots": "n/a",
+    "playtest": "pass",
+    "clip_motion": "pass",
+    "agent_playtester": "n/a"
+  },
+  "props_real": null,
+  "props_primitive": null,
+  "agent_won_by_real_play": true,
+  "bugs_missed": [
+    "UNVERIFIED: BP_ExitPipe win check may read Physics|GetMass instead of the Mass variable, so NOT ENOUGH SLIME LEFT may never fire; this rests only on a read_graph_dsl dump (a lossy tool, see findings gap 17), not on a played lose-by-low-mass run. Not counted as a confirmed miss.",
+    "Contact sheets contact_steps_2.png of playtest12, playtest13 and vp15 each show the same YOU WIN frame in tiles 14, 15 and 16 (SLOT, PASS, EXIT): all three gate passes never showed the second slot squeeze; found when the hub read the sheets"
+  ],
+  "overran": false,
+  "notes": "HAND-ENTERED, no re-derivable evidence in the repo: the Playtest and Clip motion cells are what visual_playtest verify printed (pass) when run on the mock's final gate folder ~/Projects/megajam-mock/work/vp15 (build #4, shipped to itch win64 at 11:14Z). That folder with its frames exists only locally and is kept until the owner OKs deleting it. The repo has only its small files in stages/00_prep/output/mock12/vp15/ (results.json, manifest.json, gate.ok, checklist.md); verify run on that copy fails with 'frames changed or missing' because the frames are not committed. Branch mock12-findings does not hold them either (only round2/checklist_vp15.md and contact_steps_1-3.png). Both gate runs (vp13 on build #3, vp15 on build #4) had Auto FAIL on item 1 and steps 01/02 (game starts windowed behind the taskbar), overridden with a written reason, so pass here means pass with overrides, and item 7 restart was Auto WARN reviewed PASS. First packaged is the 07:03Z Legion package and itch push (build #1, no sound, no blob); first playable packaged is build #2, processed 08:31Z: the agent reached WIN and LOSE on it with real input (playtest12 sheets), so it counts as playable, same rule as mock 11. Its vp12 gate was sloppy though (14 items settled with one pasted reason, no gate.ok or results.json in the repo, findings correction 10), so the first per-item reviewed gate is build #3 (vp13, shipped 09:47Z). Both are the log times, so upper bounds. Final build #4 at 11:14Z; the mock first said finished at 09:26Z and again at 10:30Z, and the real end was 11:17Z, well before the 13:15Z hard stop. Real props versus primitives were not recorded: the slime balloon is a real mesh, the round 2 pickups (spheres) and hazards (cones) are engine primitives, and the other props (sticky pads, fans, lollipops, candy cans, exit pipe) were not classified in the findings, so both counts are left null. No step_shot.py steps.md exist (the mock used x11grab and playtest sheets) and no agent_playtest_cli gate was run, so step shots and agent playtester are n/a. Asset previews are n/a (no preview.json). Fresh-agent judge (frames only) scored 19/35 then 20/35 after round 2; the judge reply was not saved, so those scores are as transcribed in the findings."
+}

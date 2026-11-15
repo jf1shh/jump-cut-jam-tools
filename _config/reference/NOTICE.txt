@@ -1,0 +1,10 @@
+Third-party notices for this build
+
+3D models in this game were machine-generated locally with TripoSplat
+(VAST AI Research / Tripo AI, MIT License, https://huggingface.co/VAST-AI/TripoSplat)
+run through Modly (MIT License). Pipeline components: BiRefNet (MIT License,
+Copyright (c) 2024 ZhengPeng), FLUX.2 VAE (Apache License 2.0, Black Forest Labs),
+DINOv3 (Meta, DINOv3 License). Built with DINOv3.
+
+See stages/00_prep/references/license-check-modly-foundrylab.md for the full license review of every generative tool
+used in this project's asset pipeline.

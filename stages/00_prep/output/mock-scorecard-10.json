@@ -1,0 +1,24 @@
+{
+  "_source": "stages/00_prep/output/mock-jam-findings-10.md + PR #97 (stages/03_playtest/output/playtest-10/ frames). Times are Pacific (PST).",
+  "kickoff": "2026-11-07T21:02:00-08:00",
+  "hard_stop": "2026-11-08T07:00:00-08:00",
+  "first_packaged_at": "2026-11-07T22:55:00-08:00",
+  "first_playable_packaged_at": "2026-11-08T08:40:00-08:00",
+  "gates": {
+    "step_shots": "n/a",
+    "asset_previews": "n/a",
+    "playtest": "n/a",
+    "clip_motion": "n/a",
+    "agent_playtester": "n/a"
+  },
+  "props_real": 0,
+  "props_primitive": 13,
+  "agent_won_by_real_play": false,
+  "bugs_missed": [
+    "First shipped build was not playable by a person: huge grey checker floor, stray Landscape/HLOD/duplicate lights, plants and hazards stacked at the origin, a spare Balloon, autopilot on, PrintString HUD",
+    "Packaged build differed from PIE: the autopilot ran out of water (Water -270.84) and did not win, though PIE logs showed a win in ~8 s",
+    "Level fixes were never written to disk: save_assets said all saved while the umap was still the old junk"
+  ],
+  "overran": true,
+  "notes": "Gates did not exist yet (no step shots, previews or visual playtest). First packaged time is the 22:55 gate-table stamp, an upper bound. Primitives: balloon sphere, 4 plant cones, 3 hazard bars, floor, 4 walls. Win seen only by autopilot in PIE. Playable fixes ran 07:50-08:40, after the 07:00 hard stop."
+}

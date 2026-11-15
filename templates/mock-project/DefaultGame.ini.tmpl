@@ -1,0 +1,5 @@
+; Without the GameFeatureData rule the cook fails with
+; "Asset manager settings do not include a rule for assets of type GameFeatureData"
+; (mock jams 3, 5, 7 and 10; package #1 of mock 10 lost 11 minutes to it).
+[/Script/Engine.AssetManagerSettings]
++PrimaryAssetTypesToScan=(PrimaryAssetType="GameFeatureData",AssetBaseClass="/Script/GameFeatures.GameFeatureData",bHasBlueprintClasses=True,bIsEditorOnly=False,Rules=(Priority=-1,ChunkId=-1,bApplyRecursively=true,CookRule=AlwaysCook))

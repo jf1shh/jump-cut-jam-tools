@@ -1,0 +1,3 @@
+timestamp_iso,map,loaded,fps,budget_fps,pass,screenshot,note
+2026-10-29T21:43:15Z,/Game/MockJam6/L_MockJam6,True,85.00241286975067,60.0,True,~/Projects/megajam/.claude/worktrees/mock-jam-6-phase-c/stages/03_playtest/output/qa-screenshots/Game_MockJam6_L_MockJam6.png,camera=active_viewport
+2026-10-30T16:19:37Z,/Game/MockJam7/L_MockJam7,True,115.36877857825772,60.0,True,~/Projects/megajam/.claude/worktrees/mock-jam-7/stages/03_playtest/output/qa-screenshots/Game_MockJam7_L_MockJam7.png,camera=active_viewport

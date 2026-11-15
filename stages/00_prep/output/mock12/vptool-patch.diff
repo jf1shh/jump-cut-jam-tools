@@ -1,0 +1,29 @@
+113c113
+< VALID_OPS = {"wait", "shot", "key", "click", "move", "burst", "declare"}
+---
+> VALID_OPS = {"wait", "shot", "key", "click", "move", "burst", "declare", "keydown", "keyup"}
+139a140,141
+> import os
+> GAME_PROC = os.environ.get('VP_GAME_PROC')  # patched: content-only builds run as UnrealGame.exe
+200c202
+<         if s["op"] == "key" and s.get("key") not in KEYS:
+---
+>         if s["op"] in ("key", "keydown", "keyup") and s.get("key") not in KEYS:
+1001c1003
+<                   f"-StepsFile {REMOTE_STEPS} -OutDir {REMOTE_OUT} -GameProcess {self.game_name}")
+---
+>                   f"-StepsFile {REMOTE_STEPS} -OutDir {REMOTE_OUT} -GameProcess {GAME_PROC or self.game_name}")
+206a207,219
+>             "keydown" {
+>                 $k = $ScanCodes[[string]$s.key]
+>                 if ($null -eq $k) { throw "unknown key name: $($s.key)" }
+>                 Assert-GameForeground
+>                 [MJInput]::Key([uint16]$k[0], [bool]$k[1], $false)
+>                 $lastWasInput = $true
+>             }
+>             "keyup" {
+>                 $k = $ScanCodes[[string]$s.key]
+>                 if ($null -eq $k) { throw "unknown key name: $($s.key)" }
+>                 [MJInput]::Key([uint16]$k[0], [bool]$k[1], $true)
+>                 $lastWasInput = $true
+>             }

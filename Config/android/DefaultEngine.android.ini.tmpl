@@ -1,0 +1,25 @@
+; Android block to APPEND to a mock project's Config/DefaultEngine.ini (stages/00_prep/references/android-spike.md, step 3).
+; string.Template placeholders: $package_name (e.g. com.silentblade.megajammock), $display_name.
+; Key names follow UE 5.x AndroidRuntimeSettings; the spike's step 3 compares them against
+; Project Settings > Platforms > Android once and records any rename in the findings.
+[/Script/AndroidRuntimeSettings.AndroidRuntimeSettings]
+PackageName=$package_name
+ApplicationDisplayName=$display_name
+VersionDisplayName=0.0.1
+StoreVersion=1
+; UE 5.8 floor is 26 (Android 8.0); target 34 is the 5.8 default. The S24 runs Android 14+.
+MinSDKVersion=26
+TargetSDKVersion=34
+; Single sideloadable APK, no OBB (keeps the install to one adb call).
+bPackageDataInsideApk=True
+bBuildForArm64=True
+bBuildForX8664=False
+bBuildForES31=False
+bSupportsVulkan=True
+; ASTC texture compression (the S24 GPU supports it; cook with -cookflavor=ASTC).
+bMultiTargetFormat_ASTC=True
+bMultiTargetFormat_DXT=False
+bMultiTargetFormat_ETC2=False
+; One-thumb walk is easiest held sideways.
+Orientation=Landscape
+bFullScreen=True

@@ -1,0 +1,706 @@
+﻿[
+    {
+        "label":  "start",
+        "t":  22.35,
+        "after_input":  false,
+        "file":  "01_start.png",
+        "foreground":  false
+    },
+    {
+        "label":  "idle",
+        "t":  24.17,
+        "after_input":  false,
+        "file":  "02_idle.png",
+        "foreground":  false
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_01",
+        "t":  24.35,
+        "burst_index":  1,
+        "file":  "03_burst_midplay_01.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_02",
+        "t":  24.64,
+        "burst_index":  2,
+        "file":  "04_burst_midplay_02.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_03",
+        "t":  24.88,
+        "burst_index":  3,
+        "file":  "05_burst_midplay_03.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_04",
+        "t":  25.16,
+        "burst_index":  4,
+        "file":  "06_burst_midplay_04.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_05",
+        "t":  25.42,
+        "burst_index":  5,
+        "file":  "07_burst_midplay_05.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_06",
+        "t":  25.68,
+        "burst_index":  6,
+        "file":  "08_burst_midplay_06.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_07",
+        "t":  25.96,
+        "burst_index":  7,
+        "file":  "09_burst_midplay_07.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_08",
+        "t":  26.21,
+        "burst_index":  8,
+        "file":  "10_burst_midplay_08.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_09",
+        "t":  26.46,
+        "burst_index":  9,
+        "file":  "11_burst_midplay_09.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_10",
+        "t":  26.74,
+        "burst_index":  10,
+        "file":  "12_burst_midplay_10.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_11",
+        "t":  27,
+        "burst_index":  11,
+        "file":  "13_burst_midplay_11.png"
+    },
+    {
+        "foreground":  false,
+        "after_input":  false,
+        "burst":  "midplay",
+        "label":  "burst_midplay_12",
+        "t":  27.23,
+        "burst_index":  12,
+        "file":  "14_burst_midplay_12.png"
+    },
+    {
+        "label":  "air",
+        "t":  30.38,
+        "after_input":  true,
+        "file":  "15_air.png",
+        "foreground":  true
+    },
+    {
+        "label":  "slit",
+        "t":  31.74,
+        "after_input":  true,
+        "file":  "16_slit.png",
+        "foreground":  true
+    },
+    {
+        "label":  "atwall",
+        "t":  33.4,
+        "after_input":  true,
+        "file":  "17_atwall.png",
+        "foreground":  true
+    },
+    {
+        "label":  "climb1",
+        "t":  35.3,
+        "after_input":  true,
+        "file":  "18_climb1.png",
+        "foreground":  true
+    },
+    {
+        "label":  "climb2",
+        "t":  36.94,
+        "after_input":  false,
+        "file":  "19_climb2.png",
+        "foreground":  true
+    },
+    {
+        "label":  "climb3",
+        "t":  38.57,
+        "after_input":  false,
+        "file":  "20_climb3.png",
+        "foreground":  true
+    },
+    {
+        "label":  "climb4",
+        "t":  40.21,
+        "after_input":  false,
+        "file":  "21_climb4.png",
+        "foreground":  true
+    },
+    {
+        "label":  "run0",
+        "t":  41.07,
+        "after_input":  true,
+        "file":  "22_run0.png",
+        "foreground":  true
+    },
+    {
+        "label":  "run1",
+        "t":  42.86,
+        "after_input":  true,
+        "file":  "23_run1.png",
+        "foreground":  true
+    },
+    {
+        "label":  "run2",
+        "t":  44.66,
+        "after_input":  true,
+        "file":  "24_run2.png",
+        "foreground":  true
+    },
+    {
+        "label":  "run3",
+        "t":  46.43,
+        "after_input":  true,
+        "file":  "25_run3.png",
+        "foreground":  true
+    },
+    {
+        "label":  "slot",
+        "t":  49.49,
+        "after_input":  true,
+        "file":  "26_slot.png",
+        "foreground":  true
+    },
+    {
+        "label":  "pass",
+        "t":  51.66,
+        "after_input":  false,
+        "file":  "27_pass.png",
+        "foreground":  true
+    },
+    {
+        "label":  "exit",
+        "t":  54.8,
+        "after_input":  true,
+        "file":  "28_exit.png",
+        "foreground":  true
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_01",
+        "t":  57.97,
+        "burst_index":  1,
+        "end_state":  "win",
+        "file":  "29_burst_win_01.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_02",
+        "t":  58.22,
+        "burst_index":  2,
+        "end_state":  "win",
+        "file":  "30_burst_win_02.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_03",
+        "t":  58.48,
+        "burst_index":  3,
+        "end_state":  "win",
+        "file":  "31_burst_win_03.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_04",
+        "t":  58.74,
+        "burst_index":  4,
+        "end_state":  "win",
+        "file":  "32_burst_win_04.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_05",
+        "t":  59,
+        "burst_index":  5,
+        "end_state":  "win",
+        "file":  "33_burst_win_05.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_06",
+        "t":  59.26,
+        "burst_index":  6,
+        "end_state":  "win",
+        "file":  "34_burst_win_06.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_07",
+        "t":  59.54,
+        "burst_index":  7,
+        "end_state":  "win",
+        "file":  "35_burst_win_07.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_08",
+        "t":  59.8,
+        "burst_index":  8,
+        "end_state":  "win",
+        "file":  "36_burst_win_08.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_09",
+        "t":  60.06,
+        "burst_index":  9,
+        "end_state":  "win",
+        "file":  "37_burst_win_09.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_10",
+        "t":  60.33,
+        "burst_index":  10,
+        "end_state":  "win",
+        "file":  "38_burst_win_10.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_11",
+        "t":  60.61,
+        "burst_index":  11,
+        "end_state":  "win",
+        "file":  "39_burst_win_11.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "win",
+        "label":  "burst_win_12",
+        "t":  60.85,
+        "burst_index":  12,
+        "end_state":  "win",
+        "file":  "40_burst_win_12.png"
+    },
+    {
+        "label":  "restarted",
+        "t":  65.41,
+        "after_input":  true,
+        "file":  "41_restarted.png",
+        "foreground":  true
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_01",
+        "t":  65.58,
+        "burst_index":  1,
+        "file":  "42_burst_afterrestart_01.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_02",
+        "t":  65.87,
+        "burst_index":  2,
+        "file":  "43_burst_afterrestart_02.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_03",
+        "t":  66.14,
+        "burst_index":  3,
+        "file":  "44_burst_afterrestart_03.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_04",
+        "t":  66.4,
+        "burst_index":  4,
+        "file":  "45_burst_afterrestart_04.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_05",
+        "t":  66.65,
+        "burst_index":  5,
+        "file":  "46_burst_afterrestart_05.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_06",
+        "t":  66.89,
+        "burst_index":  6,
+        "file":  "47_burst_afterrestart_06.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_07",
+        "t":  67.17,
+        "burst_index":  7,
+        "file":  "48_burst_afterrestart_07.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_08",
+        "t":  67.45,
+        "burst_index":  8,
+        "file":  "49_burst_afterrestart_08.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_09",
+        "t":  67.7,
+        "burst_index":  9,
+        "file":  "50_burst_afterrestart_09.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_10",
+        "t":  67.96,
+        "burst_index":  10,
+        "file":  "51_burst_afterrestart_10.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_11",
+        "t":  68.24,
+        "burst_index":  11,
+        "file":  "52_burst_afterrestart_11.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart",
+        "label":  "burst_afterrestart_12",
+        "t":  68.49,
+        "burst_index":  12,
+        "file":  "53_burst_afterrestart_12.png"
+    },
+    {
+        "label":  "squash1",
+        "t":  74.75,
+        "after_input":  true,
+        "file":  "54_squash1.png",
+        "foreground":  true
+    },
+    {
+        "label":  "squash2",
+        "t":  80.94,
+        "after_input":  false,
+        "file":  "55_squash2.png",
+        "foreground":  true
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_01",
+        "t":  83.12,
+        "burst_index":  1,
+        "end_state":  "lose",
+        "file":  "56_burst_lose_01.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_02",
+        "t":  83.39,
+        "burst_index":  2,
+        "end_state":  "lose",
+        "file":  "57_burst_lose_02.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_03",
+        "t":  83.67,
+        "burst_index":  3,
+        "end_state":  "lose",
+        "file":  "58_burst_lose_03.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_04",
+        "t":  83.89,
+        "burst_index":  4,
+        "end_state":  "lose",
+        "file":  "59_burst_lose_04.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_05",
+        "t":  84.16,
+        "burst_index":  5,
+        "end_state":  "lose",
+        "file":  "60_burst_lose_05.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_06",
+        "t":  84.44,
+        "burst_index":  6,
+        "end_state":  "lose",
+        "file":  "61_burst_lose_06.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_07",
+        "t":  84.7,
+        "burst_index":  7,
+        "end_state":  "lose",
+        "file":  "62_burst_lose_07.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_08",
+        "t":  84.97,
+        "burst_index":  8,
+        "end_state":  "lose",
+        "file":  "63_burst_lose_08.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_09",
+        "t":  85.24,
+        "burst_index":  9,
+        "end_state":  "lose",
+        "file":  "64_burst_lose_09.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_10",
+        "t":  85.51,
+        "burst_index":  10,
+        "end_state":  "lose",
+        "file":  "65_burst_lose_10.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_11",
+        "t":  85.77,
+        "burst_index":  11,
+        "end_state":  "lose",
+        "file":  "66_burst_lose_11.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "lose",
+        "label":  "burst_lose_12",
+        "t":  86.02,
+        "burst_index":  12,
+        "end_state":  "lose",
+        "file":  "67_burst_lose_12.png"
+    },
+    {
+        "label":  "restarted2",
+        "t":  90.51,
+        "after_input":  true,
+        "file":  "68_restarted2.png",
+        "foreground":  true
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_01",
+        "t":  90.69,
+        "burst_index":  1,
+        "file":  "69_burst_afterrestart2_01.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_02",
+        "t":  90.93,
+        "burst_index":  2,
+        "file":  "70_burst_afterrestart2_02.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_03",
+        "t":  91.21,
+        "burst_index":  3,
+        "file":  "71_burst_afterrestart2_03.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_04",
+        "t":  91.5,
+        "burst_index":  4,
+        "file":  "72_burst_afterrestart2_04.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_05",
+        "t":  91.74,
+        "burst_index":  5,
+        "file":  "73_burst_afterrestart2_05.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_06",
+        "t":  92.02,
+        "burst_index":  6,
+        "file":  "74_burst_afterrestart2_06.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_07",
+        "t":  92.29,
+        "burst_index":  7,
+        "file":  "75_burst_afterrestart2_07.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_08",
+        "t":  92.55,
+        "burst_index":  8,
+        "file":  "76_burst_afterrestart2_08.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_09",
+        "t":  92.82,
+        "burst_index":  9,
+        "file":  "77_burst_afterrestart2_09.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_10",
+        "t":  93.08,
+        "burst_index":  10,
+        "file":  "78_burst_afterrestart2_10.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_11",
+        "t":  93.34,
+        "burst_index":  11,
+        "file":  "79_burst_afterrestart2_11.png"
+    },
+    {
+        "foreground":  true,
+        "after_input":  false,
+        "burst":  "afterrestart2",
+        "label":  "burst_afterrestart2_12",
+        "t":  93.63,
+        "burst_index":  12,
+        "file":  "80_burst_afterrestart2_12.png"
+    }
+]

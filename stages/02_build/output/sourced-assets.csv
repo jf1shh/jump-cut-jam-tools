@@ -1,0 +1,12 @@
+name,source_url,licence,author,files_used,date
+UE engine content: BasicShapes Cube + Cylinder meshes,https://www.unrealengine.com/eula,Unreal Engine EULA (engine content),Epic Games,/Engine/BasicShapes/Cube; /Engine/BasicShapes/Cylinder (greybox car and stunt blocks; JCCarPawn.cpp),2026-11-12
+UE engine content: BasicShapeMaterial,https://www.unrealengine.com/eula,Unreal Engine EULA (engine content),Epic Games,/Engine/BasicShapes/BasicShapeMaterial (fallback car paint),2026-11-12
+UE engine content: WorldGridMaterial,https://www.unrealengine.com/eula,Unreal Engine EULA (engine content),Epic Games,/Engine/EngineMaterials/WorldGridMaterial (engine default material; look step 2 removes it from visible shots),2026-11-12
+UE engine content: Open World level template,https://www.unrealengine.com/eula,Unreal Engine EULA (engine content),Epic Games,/Engine/Maps/Templates/OpenWorld,2026-11-12
+Roboto (UE default UI font),https://github.com/googlefonts/roboto,Apache License 2.0,Google (shipped with Unreal Engine),FCoreStyle::GetDefaultFontStyle (HUD text),2026-11-12
+Fira Sans Compressed,https://github.com/bBoxType/FiraSans,SIL Open Font License 1.1,The Mozilla Foundation; Telefonica; bBox Type; Carrois,jam page cover; banner; video title card (not in the game build),2026-11-12
+DejaVu Sans Mono,https://dejavu-fonts.github.io/License.html,DejaVu Fonts licence (Bitstream Vera based),DejaVu Fonts team,jam page cover and banner small text (not in the game build),2026-11-12
+Kenney Input Prompts,https://kenney.nl/assets/input-prompts,CC0,Kenney,"Content/UI/Sourced/InputPrompts/* (15 glyphs: keyboard_space,a,d,n,q,escape,w,s; xbox_button_a,button_y,button_view,button_menu,rt,lt,stick_l_horizontal)",2026-11-12
+Kenney UI Pack,https://kenney.nl/assets/ui-pack,CC0,Kenney,"Content/UI/Sourced/UIPack/* (star, star_outline)",2026-11-12
+Kenney Interface Sounds,https://kenney.nl/assets/interface-sounds,CC0,Kenney,"Content/Audio/Sourced/InterfaceSounds/* (click_003, confirmation_002, error_004, open_002)",2026-11-12
+Poly Haven Plywood,https://polyhaven.com/a/plywood,CC0,Rob Tuytel (Poly Haven),"plywood_diff_2k.jpg -> Content/Textures/T_Plywood_BC (imported at 1K; used by MI_Ramp_Plywood on the ramp wedges and crash walls; arm/nor maps not used)",2026-11-12

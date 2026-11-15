@@ -1,0 +1,17 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# Asset-pipeline test output (gen_asset.py) — throwaway/regenerable, not real
+# jam art. Keep only stages/02_build/output/asset-pipeline-log.csv tracked for timing history.
+/work/generated/
+
+# Audio-pipeline test output (gen_music.py) — same deal, keep only
+# stages/02_build/output/audio-pipeline-log.csv tracked for timing history.
+/work/audio/
+
+# fal music: ledger lock file and atomic-rewrite temp files (gen_music_fal.py); the ledger CSV itself IS tracked.
+/stages/02_build/output/*.lock
+/stages/02_build/output/*.tmp
+
+# Python bytecode caches.
+__pycache__/

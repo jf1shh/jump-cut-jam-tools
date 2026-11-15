@@ -1,0 +1,8 @@
+timestamp_iso,out,duration_s,seconds,exit_code
+2026-10-28T20:15:41Z,work/audio/test_theme.flac,30,0.14,3
+2026-10-28T23:19:32Z,work/audio/test_theme.flac,30,112.46,0
+2026-10-29T13:34:34Z,work/audio/mockjam4_score_hit.flac,10,2.22,1
+2026-10-29T13:34:55Z,work/audio/mockjam4_score_hit.flac,10,2.15,1
+2026-10-29T17:39:02Z,work/audio/lastlight_theme.flac,45,0.16,3
+2026-10-29T17:43:47Z,work/audio/lastlight_theme.flac,45,118.41,0
+2026-11-02T15:40:14Z,work/audio/e2e_20261102_theme.flac,15,96.47,0

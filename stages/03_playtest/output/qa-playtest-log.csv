@@ -1,0 +1,3 @@
+timestamp_iso,map,objective_tag,ticks,start_distance,end_distance,pass,note
+2026-10-30T16:27:40Z,/Game/MockJam7/L_MockJam7,QAObjective,180,602.0797289396148,587.8502725661971,True,ran-to-max-ticks
+2026-10-30T18:26:14Z,/Game/MockJam7/L_MockJam7,QAObjective,180,602.0797289396148,50.00426652183205,True,ran-to-max-ticks

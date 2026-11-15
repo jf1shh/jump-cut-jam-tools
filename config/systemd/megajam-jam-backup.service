@@ -1,0 +1,10 @@
+[Unit]
+Description=MegaJam nightly jam backup to the NAS (stages/04_ship/references/jam-recovery.md B3+B5)
+RequiresMountsFor=/mnt/truenas-nfs/backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/zsh %h/Projects/megajam/scripts/jam_backup.sh nightly
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=45min

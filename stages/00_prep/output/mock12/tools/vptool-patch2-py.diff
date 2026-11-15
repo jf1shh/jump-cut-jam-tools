@@ -1,0 +1,40 @@
+--- ~/Projects/megajam/scripts/visual_playtest.py	2026-11-08 21:45:55.730148773 -0800
++++ ~/Projects/megajam-mock/work/vptool/visual_playtest.py	2026-11-09 02:13:17.859615041 -0800
+@@ -110,7 +110,7 @@
+     {"op": "burst", "label": "afterrestart", "seconds": 3, "frames": 12},
+ ]
+ 
+-VALID_OPS = {"wait", "shot", "key", "click", "move", "burst", "declare"}
++VALID_OPS = {"wait", "shot", "key", "click", "move", "burst", "declare", "keydown", "keyup"}
+ END_STATES = ("lose", "win")
+ LABEL_RE = re.compile(r"[A-Za-z0-9-]+")  # burst labels: no "_" so file names split cleanly
+ 
+@@ -137,6 +137,8 @@
+ 
+ 
+ KEYS = _build_keys()
++import os
++GAME_PROC = os.environ.get('VP_GAME_PROC')  # patched: content-only builds run as UnrealGame.exe
+ 
+ 
+ def log(msg):
+@@ -197,7 +199,7 @@
+             raise ValueError(f"step {i}: op must be one of {sorted(VALID_OPS)}")
+         if s["op"] == "shot" and not re.fullmatch(r"[A-Za-z0-9_-]+", str(s.get("label", ""))):
+             raise ValueError(f"step {i}: shot needs a label made of letters, digits, _ or -")
+-        if s["op"] == "key" and s.get("key") not in KEYS:
++        if s["op"] in ("key", "keydown", "keyup") and s.get("key") not in KEYS:
+             raise ValueError(f"step {i}: unknown key {s.get('key')!r}; use one of {' '.join(sorted(KEYS))}")
+         if s["op"] == "burst":
+             if not LABEL_RE.fullmatch(str(s.get("label", ""))):
+@@ -997,8 +999,8 @@
+                     raise RuntimeError(f"scp of {Path(src).name} failed: {err.strip()[-120:]}")
+             # no inner quotes and no spaces in any path: they get mangled across bash -> ssh -> schtasks
+             # -WindowStyle Hidden: a visible console would take the foreground and swallow the keys.
+-            tr = (f"powershell -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File {REMOTE_SCRATCH}/{INPUT_PS1} "
+-                  f"-StepsFile {REMOTE_STEPS} -OutDir {REMOTE_OUT} -GameProcess {self.game_name}")
++            tr = (f"conhost.exe --headless powershell -NoP -EP Bypass -File {REMOTE_SCRATCH}/{INPUT_PS1} "
++                  f"-StepsFile {REMOTE_STEPS} -OutDir {REMOTE_OUT} -GameProcess {GAME_PROC or self.game_name}")
+             rc, _, err = self.ssh(f'schtasks /Create /TN {INPUT_TASK} /TR "{tr}" /SC ONCE /ST 00:00 /IT /F')
+             if rc != 0:
+                 raise RuntimeError(f"could not create the input task: {err.strip()[-120:]}")

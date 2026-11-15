@@ -1,0 +1,47 @@
+name: MegaJam CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  # Catches drift (host Python upgrades, etc.) even on weeks with no push.
+  schedule:
+    - cron: "0 6 * * 1"
+
+# Private repo: GitHub-hosted minutes are capped, so jobs run on the owner's
+# self-hosted desktop runner. Dependabot PRs stay on GitHub-hosted runners so
+# dependency code from a PR never executes on the desktop. A newer push to the
+# same branch or PR cancels the older run.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # Pre-jam (Rule 7(h)): this repo is scripts/stages/config only, no game
+  # content yet, so CI just has to catch syntax errors in the Python tooling.
+  python-syntax:
+    runs-on: >-
+      ${{ github.actor == 'dependabot[bot]' && fromJSON('["ubuntu-latest"]') || fromJSON('["self-hosted", "linux", "desktop"]') }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.12
+        if: runner.environment == 'github-hosted'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # setup-python has no prebuilt Python for the self-hosted desktop's
+      # distro (CachyOS), so it 404s there: use the host's 3.12 directly.
+      - name: Use host Python 3.12 (self-hosted)
+        if: runner.environment == 'self-hosted'
+        run: |
+          mkdir -p "$RUNNER_TEMP/home" && echo "HOME=$RUNNER_TEMP/home" >> "$GITHUB_ENV"
+      - name: Compile-check all scripts
+        run: |
+          shopt -s globstar nullglob
+          python3.12 -m py_compile scripts/**/*.py

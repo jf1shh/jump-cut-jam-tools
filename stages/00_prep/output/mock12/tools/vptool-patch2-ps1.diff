@@ -1,0 +1,46 @@
+--- ~/Projects/megajam/scripts/visual_playtest_input.ps1	2026-11-08 12:23:17.893896663 -0800
++++ ~/Projects/megajam-mock/work/vptool/visual_playtest_input.ps1	2026-11-09 02:18:21.987090417 -0800
+@@ -50,6 +50,8 @@
+     [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h, int cmd);
+     [DllImport("user32.dll")] public static extern void keybd_event(byte vk, byte scan, uint flags, UIntPtr extra);
+     public static uint ForegroundPid() { uint pid; GetWindowThreadProcessId(GetForegroundWindow(), out pid); return pid; }
++    [DllImport("user32.dll")] public static extern void mouse_event(uint f, uint dx, uint dy, uint d, UIntPtr e);
++    public static void Click(int x, int y) { SetCursorPos(x, y); mouse_event(2, 0, 0, 0, UIntPtr.Zero); mouse_event(4, 0, 0, 0, UIntPtr.Zero); }
+     public static void AltTap() { keybd_event(0x12, 0, 0, UIntPtr.Zero); keybd_event(0x12, 0, 2, UIntPtr.Zero); } // lets SetForegroundWindow through
+     public static void Key(ushort scan, bool extended, bool up) {
+         INPUT[] a = new INPUT[1];
+@@ -147,12 +149,12 @@
+         $p = Get-GameProc
+         if ($null -ne $p) {
+             [void][MJInput]::ShowWindow($p.MainWindowHandle, 9)   # SW_RESTORE
+-            [MJInput]::AltTap()
++            [MJInput]::Click(960, 600)   # a click activates the window; a bare Alt opens the AMD overlay
+             [void][MJInput]::SetForegroundWindow($p.MainWindowHandle)
+         }
+         Start-Sleep -Milliseconds 400
+     }
+-    if (-not (Test-GameForeground)) { throw "the game window ($GameProcess) is not the foreground window; input would go elsewhere" }
++    if (-not (Test-GameForeground)) { $fgp = Get-Process -Id ([MJInput]::ForegroundPid()) -ErrorAction SilentlyContinue; throw "the game window ($GameProcess) is not the foreground window (foreground: $($fgp.ProcessName) / $($fgp.MainWindowTitle)); input would go elsewhere" }
+ }
+ 
+ function Save-Shot($label, $afterInput, $extra = @{}) {
+@@ -204,6 +206,19 @@
+                 [MJInput]::Key([uint16]$k[0], [bool]$k[1], $true)
+                 $lastWasInput = $true
+             }
++            "keydown" {
++                $k = $ScanCodes[[string]$s.key]
++                if ($null -eq $k) { throw "unknown key name: $($s.key)" }
++                Assert-GameForeground
++                [MJInput]::Key([uint16]$k[0], [bool]$k[1], $false)
++                $lastWasInput = $true
++            }
++            "keyup" {
++                $k = $ScanCodes[[string]$s.key]
++                if ($null -eq $k) { throw "unknown key name: $($s.key)" }
++                [MJInput]::Key([uint16]$k[0], [bool]$k[1], $true)
++                $lastWasInput = $true
++            }
+             "click" {
+                 Assert-GameForeground
+                 if ($null -ne $s.x) { [void][MJInput]::SetCursorPos([int]$s.x, [int]$s.y) }

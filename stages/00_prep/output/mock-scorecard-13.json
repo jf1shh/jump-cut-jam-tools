@@ -1,0 +1,19 @@
+{
+  "_source": "stages/00_prep/output/mock-jam-findings-13.md (the mock's work/mock13-findings.md and work/mock13-timeline.md). Times are UTC. Short grey-box practice run, not the full mock of the brief.",
+  "kickoff": "2026-11-09T22:19:27+00:00",
+  "hard_stop": "2026-11-10T01:17:17+00:00",
+  "first_packaged_at": null,
+  "first_playable_packaged_at": null,
+  "gates": {
+    "step_shots": "n/a",
+    "playtest": "n/a",
+    "clip_motion": "n/a",
+    "agent_playtester": "n/a"
+  },
+  "props_real": 0,
+  "props_primitive": null,
+  "agent_won_by_real_play": false,
+  "bugs_missed": [],
+  "overran": false,
+  "notes": "HAND-ENTERED from the findings. Short grey-box practice run (theme Sleepy lighthouse, not the brief's liquid metal balloon): started 22:19:27Z, the loop (won, lost, restart, gate recorded) was proven in about 20 minutes by 22:39Z, and the run ended early; the 01:17Z hard stop was not needed. Nothing was packaged or pushed, so no packaged times. No gate was run (step shots, playtest, clip motion, agent playtester all n/a). Won by real play is false: a test bot (variable Auto) drove every proof, and real WASD/R keys were NOT proven (Wayland allows no key injection). Primitives only, no real props; the primitive count was not recorded."
+}

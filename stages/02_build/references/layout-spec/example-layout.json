@@ -1,0 +1,22 @@
+{
+  "name": "EXAMPLE ONLY: two boxes and a corridor. Not a jam level, not for the entry.",
+  "units": "cm",
+  "level_path": "/Game/MockLayout/L_LayoutExample",
+  "rooms": [
+    {"id": "A", "x": 0, "y": 0, "w": 600, "h": 600},
+    {"id": "C", "kind": "corridor", "x": 600, "y": 0, "w": 600, "h": 300},
+    {"id": "B", "x": 1200, "y": 0, "w": 600, "h": 600}
+  ],
+  "doors": [
+    {"id": "A-C", "room": "A", "side": "E", "to": "C", "offset": 0, "width": 200, "height": 240},
+    {"id": "C-B", "room": "C", "side": "E", "to": "B", "offset": 0, "width": 200, "height": 240}
+  ],
+  "start": {"x": -200, "y": 0},
+  "objective": {"x": 1200, "y": 0},
+  "paths": [
+    {"id": "main", "points": [[-200, 0], [1200, 0]], "length_cm": 1400, "walk_time_s": 2.8}
+  ],
+  "targets": {"main_walk_time_s": [2, 6]},
+  "gaps": [],
+  "ledges": []
+}

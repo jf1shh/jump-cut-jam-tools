@@ -1,0 +1,9 @@
+; First level is named up front so nobody saves "Untitled" and the packaged build has a start map.
+; Create the level in the editor and save it at exactly this path.
+[/Script/EngineSettings.GameMapsSettings]
+EditorStartupMap=$level_path
+GameDefaultMap=$level_path
+
+; Pin the MCP port (stages/00_prep/references/jam-day-runbook.md section 2). Leave Auto Start Server off.
+[/Script/ModelContextProtocolEngine.ModelContextProtocolSettings]
+ServerPortNumber=$mcp_port

@@ -1,0 +1,23 @@
+{
+  "_source": "stages/00_prep/output/mock-jam-findings-11.md + the observer report (megajam/work/mock11-observer.md) + the mock's kept work/ files (~/Projects/megajam-mock11-kept/work, file times). Times are Pacific (PST).",
+  "kickoff": "2026-11-08T09:00:00-08:00",
+  "hard_stop": "2026-11-08T19:00:00-08:00",
+  "first_packaged_at": "2026-11-08T11:57:00-08:00",
+  "first_playable_packaged_at": "2026-11-08T11:57:00-08:00",
+  "gates": {
+    "step_shots": "n/a",
+    "playtest": "n/a",
+    "clip_motion": "n/a",
+    "agent_playtester": "n/a"
+  },
+  "props_real": 11,
+  "props_primitive": 17,
+  "agent_won_by_real_play": true,
+  "bugs_missed": [
+    "Win text clipped at the right edge (1920x1200) and low contrast on the sand: the first playtest still passed every checklist item; found in the lead's tester report, fixed in iteration 2",
+    "Balloon shipped about 1.5x wider than tall (a flat red disc): asset_preview.py reported ok; found by the lead's PIE shots and get_bounds, and the level copy kept the old scale until set on the actor",
+    "Legion console locked itself after idle: every capture came back black (and OBS would not start), found only by reading the frames; no lock preflight exists"
+  ],
+  "overran": false,
+  "notes": "No owner playtest is recorded, so the missed bugs above were found by the lead agent and the observer, not by the owner. First packaged and first playable are the first butler push (build #2334237, work/push.log time); a local package finished earlier (ship3.done 10:28), so both are upper bounds. Real props: balloon, anchor stake, 4 flags, 5 pinwheels. Primitives: 7 stalls, 4 spikes, 5 ribbon pickups, kid body; ground, path, walls and the tether cylinder are not counted. Asset previews cover 3 of the props (the Blender-coded flag and pinwheel have none). Playtest is n/a: the final run vp_r16 was judged PASS by the verify the mock ran (findings), but its checklist has no step review section, so today's verify cannot re-prove it (it reports a run-wide problem); vp_r16 followed a black-frame run vp_r15. Last push about 18:05 PST, after the 18:00 feature freeze but before the 19:00 hard stop. No step_shot.py steps.md and no agent_playtest_cli gate output exist, so both are n/a. Rule 6 video clips were not recorded (OBS blocked by the locked Legion)."
+}
