@@ -95,7 +95,7 @@ def identity_text(name, game_dir):
 This folder is the MegaJam entry's Unreal Engine project (UE 5.9 Preview, 5.8.4 fallback): `{name}.uproject`,
 `Config/`, `Content/`. It is the Diversion-versioned game folder.
 
-- Owner: jf1shh (solo, with AI agents). A human submits the entry.
+- Owner: Jared Fisher (solo, with AI agents). A human submits the entry.
 - Jam: 2026 Epic AI MegaJam, {JAM_WINDOW}.
 - Path: `{game_dir}`
 - Tools, canon, rules and the plan live in `~/Projects/megajam` (start with its `AGENTS.md`).

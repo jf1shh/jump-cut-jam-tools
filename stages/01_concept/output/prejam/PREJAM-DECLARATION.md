@@ -13,7 +13,7 @@ and the exact prompt for every picture.
   "PRE-JAM REFERENCE, NOT A GAME ASSET". Any in-game art is made inside the window and logged in
   `stages/02_build/output/asset-pipeline-log.csv` (AI-made) or `stages/02_build/output/sourced-assets.csv` (sourced).
 - **The build target is [`../gdd.md`](../gdd.md)** (locked 2026-11-11 13:31 PT). This pack never edits it.
-- Requested by the hub session (hub 98) for the owner, jf1shh. The owner wrote none of the text below; the GDD
+- Requested by the hub session (hub 98) for the owner, Jared Fisher. The owner wrote none of the text below; the GDD
   decisions it builds on are the owner's (see the GDD header).
 
 ## Text files

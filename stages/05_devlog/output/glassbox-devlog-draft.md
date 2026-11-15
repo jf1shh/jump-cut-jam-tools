@@ -1,6 +1,6 @@
 # JUMP CUT dev log: how it was made
 
-Team Second Unit. Solo entry by jf1shh. Theme: "Director's Cut". Made in Unreal Engine 5.9 for the 2026 Epic AI MegaJam. This is my entry for the Glass Box prize, so this page covers how the game got built as well as what it is.
+Team Second Unit. Solo entry by Jared Fisher. Theme: "Director's Cut". Made in Unreal Engine 5.9 for the 2026 Epic AI MegaJam. This is my entry for the Glass Box prize, so this page covers how the game got built as well as what it is.
 
 I worked with a team of AI agents (Claude, through Claude Code). They wrote almost all of the code and ran the tests. I made the calls and played the game, and I submit it by hand.
 
